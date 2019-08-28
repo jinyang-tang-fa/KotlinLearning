@@ -1,5 +1,6 @@
 # Kotlin Learning
-## General on Kotlin
+
+## 1. General on Kotlin
 * Statically typed like Java, unlike dynamically typed language such as JRuby
  
 	Pros:    
@@ -9,3 +10,44 @@
 * Type inference: `val a = 1`
 * Support `nullable` types - reliable code, detecting possible null at compile time
 * Support `function` types
+
+* Functional programming
+  1. Function as **value**
+  2. Immutable objects - state can’t change after creation
+  3. More power of abstraction - avoid duplication
+  4. **Safe multithreading** - avoid modification of same data from multiple threads
+  5. Easier testing - without setting up a lot of env
+
+
+## 2. Kotlin Basics
+* Data classes - a concise syntax for creating **immutable** value objects
+* NullPointerException
+```Java
+   val s: String? = null
+```
+* ClassCastException
+```Java
+	If (value is String)
+	 	println(value.toUpperCase())
+```
+
+* `If` is expression with value instead of statement
+```Java
+  if (a > b) a else b
+```
+* Type inference
+```Java
+   fun max(a: Int?, b: Int?): Int? = if(a != null && b != null && a > b) a else b
+```
+
+* `val` (value) - immutable
+* `var` (variable) - mutable
+* `reference` itself is immutable, but we can change the object it points to
+* `public` is default visibility - omit it
+* Different package usage need to import
+* Can import function by name
+
+* Enum class - **only place need semicolon in Kotlin**
+   Define any methods in the enum class, the semicolon separates the enum constant list from the method definitions
+
+* `when` expression - like `switch` in java

@@ -5,7 +5,7 @@
  
 	Pros:    
 	    1. type is known at compile time, complier can do validation on methods and fields
-        2. mispelled names can be detected at compile time instead of run time
+      2. mispelled names can be detected at compile time instead of run time
 
 * Type inference: `val a = 1`
 * Support `nullable` types - reliable code, detecting possible null at compile time
@@ -50,4 +50,33 @@
 * Enum class - **only place need semicolon in Kotlin**
    Define any methods in the enum class, the semicolon separates the enum constant list from the method definitions
 
-* `when` expression - like `switch` in java
+* `when` expression - like `switch` in Java, but with no argument (must have `else` defined within `when` block)
+```Java
+  fun whenFunction(c1: Color, c2: Color) =
+    when {
+      (c1 == Color.RED && c2 == Color.YELLOW) -> Color.ORANGE
+      (c1 == Color.YELLOW && c2 == Color.BLUE) -> Color.GREEN
+      else -> throw Exception("Bad Color")
+    }
+```
+
+* Use `:` to mark class *implements* an interface
+```Java
+  interface Expr
+  class Num(val value: Int): Expr
+  class Sum(val left: Expr, val right: Expr): Expr
+```
+
+* Smart cast: check whether a variable is certain type using `is`, and can directly use this variable without additional casting
+```Java
+  fun eval(e: Expr): Int {
+    if (e is Num) {
+      resturn e.value
+    }
+    if (e is Sum) {
+      return eval(e.left) + eval(e.right)
+    }
+      throw IllegalArgumentException("Unknown Exception")
+
+  }
+```

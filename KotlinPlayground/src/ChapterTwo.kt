@@ -1,3 +1,8 @@
+import java.io.BufferedReader
+import java.io.StringReader
+import java.lang.NumberFormatException
+import java.util.*
+
 data class Person(val name: String, val age: Int? = null)
 
 fun main(args: Array<String>) {
@@ -21,7 +26,49 @@ fun main(args: Array<String>) {
     println("RED and YELLOW mixed is: ${colorRed.mixOptimized(colorRed, colorYellow)}")
 
     // Smart cast
-    println("(1+2)+4 = ${eval(Sum(Sum(Num(1), Num(2)), Num(4)))}")
+    println("(1+2)+4 = ${evalWithLogging(Sum(Sum(Num(1), Num(2)), Num(4)))}")
+
+    // Iteration
+    for (i in 1..100) {
+        print(fizzBuzz(i))
+    }
+    println()
+    for (i in 100 downTo 1 step 2) {
+        print(fizzBuzz(i))
+    }
+    println()
+
+    // Iterate through map
+    val binaryReps = TreeMap<Char, String>()
+    for (c in 'A'..'F') {
+        val binary = Integer.toBinaryString(c.toInt())
+        binaryReps[c] = binary
+    }
+    for ((letter, binary) in binaryReps) {
+        println("Binary map: $letter = $binary")
+    }
+
+    // Iterate through collection with Index
+    val list = listOf("1", "2", "3")
+    for ((index, element) in list.withIndex()) {
+        println("list index $index: $element")
+    }
+
+    // check range
+    fun isLetter(c: Char) = c in 'a'..'z' || c in 'A' .. 'Z'
+    fun isNotDigit(c: Char) = c !in '0'..'9'
+    println("b is Letter: ${isLetter('b')}")
+    println("3 is not digit: ${isNotDigit('3')}")
+
+    // Try - catch - finally
+    val reader = BufferedReader(StringReader("123"))
+    val invalidReader = BufferedReader(StringReader("abc"))
+    println("Read Number: ${readNumber(reader)}")
+    println("Read Invalid Number: ${readNumber(invalidReader)}")
+
+
+
+
 
 
 
@@ -70,5 +117,52 @@ fun eval(e: Expr): Int {
         return eval(e.left) + eval(e.right)
     }
     throw IllegalArgumentException("Unknown Exception")
+}
+
+// Polishing eval function
+fun evalRefactor(e: Expr): Int =
+    when (e) {
+        is Num -> e.value
+        is Sum -> eval(e.left) + eval(e.right)
+        else -> throw IllegalArgumentException("Unknown Exception")
+    }
+
+// Blocks as branches in when
+fun evalWithLogging(e: Expr): Int =
+    when (e) {
+        is Num -> {
+            println("num: ${e.value}")
+            e.value
+        }
+        is Sum -> {
+            val left = evalWithLogging(e.left)
+            val right = evalWithLogging(e.right)
+            println("Sum: $left + $right")
+            left + right
+        }
+        else -> throw IllegalArgumentException("Unknown Exception")
+    }
+
+// Iteration
+fun fizzBuzz(i: Int) = when {
+    i % 15 == 0 -> "FizzBuzz "
+    i % 3 == 0 -> "Fizz "
+    i % 5 == 0 -> "Buzz "
+    else -> "$i "
+}
+
+
+// Try - catch - finally
+fun readNumber(reader: BufferedReader): Int? {
+    return try {
+        val line = reader.readLine()
+        Integer.parseInt(line)
+    }
+    catch (e: NumberFormatException) {
+        null
+    }
+    finally {
+        reader.close()
+    }
 }
 

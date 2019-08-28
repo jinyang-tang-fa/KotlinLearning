@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810e02e1-f013-47fe-9b8b-88f423971a90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../KotlinLearning.md" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinLearning.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinLearning.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterTwoKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterTwoKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/LearningKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Num.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Num.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Rectangle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Sum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Sum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChapterTwo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChapterTwo.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +83,7 @@
       <updated>1566927021735</updated>
       <workItem from="1566927024578" duration="1779000" />
       <workItem from="1567015157910" duration="6853000" />
-      <workItem from="1567027814912" duration="1524000" />
+      <workItem from="1567027814912" duration="4561000" />
     </task>
     <servers />
   </component>

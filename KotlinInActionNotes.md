@@ -59,6 +59,7 @@
       else -> throw Exception("Bad Color")
     }
 ```
+    - If a block is used in `when` condition check, **the last expression is the result**
 
 * Use `:` to mark class *implements* an interface
 ```Java
@@ -80,3 +81,43 @@
 
   }
 ```
+
+* `while` and `do-while` is the same as Java
+```Java
+  while(condition) {
+    ...
+  }
+  do {
+    ...
+  } while (condition)
+```
+
+* `ranges` concept is used to do iteration - `..` is used and is *inclusive* which include second value
+```Java
+  val oneToTen = 1..10
+```
+```Java
+  for (i in 1..1000) {
+    ...
+  }
+  for (i in 100 downTo 1 step 2) {
+    ...
+  }
+  for (i in 0 until 100) { // this will exclusive 100
+    ...
+  }
+```
+
+* Use `for ((key, value) in map)` to iterate through map
+* `map[key]` and `map[key] = value` can be used to read and update the map
+* Use `in` to check whether a value is in a range, `!in` to check the opposite, both also works in `when` expression
+* `throw` is also expression
+```Java
+  val percentage = 
+     if (number in 0..100)
+         number
+     else
+         throw IllegalArgumentException("Number must be between 0 and 100")
+```
+* `try` keyword is also an expression, and exception doesn't need to be explicitly specified thrown by a function
+ 

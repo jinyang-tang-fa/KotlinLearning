@@ -152,7 +152,7 @@ same as
 If using extension function outside of its package, need to import it
 ```Java
   import strings.lastChar
-  import strings.lastTwoLetters as lastTwoLetters // can change the name for easy call
+  import strings.lastTwoLetters as lastTwoLetters // can change the name for easy function call
 ```
 
 

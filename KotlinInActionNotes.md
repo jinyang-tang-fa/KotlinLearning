@@ -120,4 +120,44 @@
          throw IllegalArgumentException("Number must be between 0 and 100")
 ```
 * `try` keyword is also an expression, and exception doesn't need to be explicitly specified thrown by a function
- 
+
+
+## 3. Defining and calling functions
+* Create new set: `setOf()` (`hashSetOf()` -> default mutable set), same for `arrayListOf()` and `hashMapOf()`
+* More methods than that in Java: `last()`, `max()`...
+* Specify names of some arguments to **increase readability**, and you can omit some middle arguments (with default value set)
+```Java
+  jointToString(collection, separator=" ", prefix="(", postfix=")")
+```
+* Specify default values for parameters in a function declaration to **avoid creating overloads**
+* Functions can be declared outside of class -> at the top level of a source file (compiled to `static method`)
+* Properties can be placed at the top level of a file as well, will be stored in a `static field` -> can be used to defined constants
+```Java
+  const val UNIX_LINE_SEPARATOR = "\n"
+```
+same as 
+```Java
+  public static final String UNIX_LINE_SEPARATOR = "\n";
+```
+* Extension functions - allow us to add our own method to the existing class, without the need to rewrite the existing code
+```Java
+  package strings
+
+  fun String.lastChar(): Char = this[this.length - 1]
+  fun String.lastTwoLetters(): String = substring(this.length - 2)  // 'this' can be omitted
+
+  println("Kotlin".lastChar())
+  println("Kotlin".lastTwoLetters())
+```
+If using extension function outside of its package, need to import it
+```Java
+  import strings.lastChar
+  import strings.lastTwoLetters as lastTwoLetters // can change the name for easy call
+```
+
+
+
+
+
+
+

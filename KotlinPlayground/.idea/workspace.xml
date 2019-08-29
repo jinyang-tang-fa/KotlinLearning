@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810e02e1-f013-47fe-9b8b-88f423971a90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../KotlinLearning.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChapterThree.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinInActionNotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinInActionNotes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterTwoKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterTwoKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Color.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Color.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Num.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Num.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Sum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Sum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChapterTwo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChapterTwo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -51,7 +47,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.ChapterThreeKt">
+    <configuration name="ChapterThreeKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="KotlinPlayground" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ChapterThreeKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChapterTwoKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="KotlinPlayground" />
       <option name="VM_PARAMETERS" value="" />
@@ -67,6 +76,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.ChapterThreeKt" />
         <item itemvalue="Kotlin.ChapterTwoKt" />
       </list>
     </recent_temporary>
@@ -83,7 +93,8 @@
       <updated>1566927021735</updated>
       <workItem from="1566927024578" duration="1779000" />
       <workItem from="1567015157910" duration="6853000" />
-      <workItem from="1567027814912" duration="4561000" />
+      <workItem from="1567027814912" duration="4847000" />
+      <workItem from="1567091478149" duration="3907000" />
     </task>
     <servers />
   </component>
@@ -95,7 +106,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

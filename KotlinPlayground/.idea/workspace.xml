@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810e02e1-f013-47fe-9b8b-88f423971a90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ChapterThree.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KotlinInActionNotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinInActionNotes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterThreeKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterThreeKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChapterThree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChapterThree.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +94,7 @@
       <workItem from="1566927024578" duration="1779000" />
       <workItem from="1567015157910" duration="6853000" />
       <workItem from="1567027814912" duration="4847000" />
-      <workItem from="1567091478149" duration="3907000" />
+      <workItem from="1567091478149" duration="9176000" />
     </task>
     <servers />
   </component>

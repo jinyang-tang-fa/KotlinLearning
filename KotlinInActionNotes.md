@@ -151,9 +151,29 @@ same as
 ```
 If using extension function outside of its package, need to import it
 ```Java
-  import strings.lastChar
-  import strings.lastTwoLetters as lastTwoLetters // can change the name for easy function call
+  import strings.lastChar as last // can change name for easy func call
 ```
+* The `static` nature of extensions -> 
+1. can extend from a more specific type
+2. cannot be overridden in subclasses
+```Java
+  open class View {
+    open fun click() = println("View click")
+  }
+  class Button: View() {
+    override fun click() = println("Button click")
+  }
+  fun View.showOff() = println("I'm view")
+  fun Button.showOff() = println("I'm button")
+
+  val button: View = Button()
+```
+`button.click()` will give out `Button click`, but `button.showOff()` will still be `I'm view`
+
+* When extending the API of classes: if adding a member function with the same signature as an extension function, **it will always take precedence**
+
+* Extension property - cannot be defined locally (cannot be in a func body)
+* Collections in Kotlin are instances of Java library classes, but have much more extended API, because they use *extension functions and properties*
 
 
 

@@ -151,7 +151,7 @@ same as
 ```
 If using extension function outside of its package, need to import it
 ```Java
-  import strings.lastChar as last // can change name for easy func call
+  import strings.lastChar as last. // can rename for easy use
 ```
 * The `static` nature of extensions -> 
 1. can extend from a more specific type
@@ -175,7 +175,33 @@ If using extension function outside of its package, need to import it
 * Extension property - cannot be defined locally (cannot be in a func body)
 * Collections in Kotlin are instances of Java library classes, but have much more extended API, because they use *extension functions and properties*
 
-
+## 4. Classes, objects and interfaces
+* Interfaces can contain definitions of **abstract** methods and implementations of **non-abstract** methods, but cannot contain any `state`
+* Interface method can have default implementation, it can be overridden, but also can be omitted in implementation
+```Java
+  interface Clickable {
+    fun showOff() = println("I'm clickable")
+  }
+```
+* If a class implement multiple interfaces, and both interfaces has same signature for defalt method, **we must override the method with custom implementation**
+* Need to add `open` before class or functions, if you want the class to be inherited and function to be overridden
+* If you override an `open` function, it is by default `open`, but can add `final` to make it not being overridden
+* **Abstract** members are always open by default, can need to be to be overridden in subclasses
+* Default visibility is `public`
+1. `public` - visible everywhere
+2. `internal` - within module
+3. `protected` - within subclasses
+4. `private` - within class
+* Extension functions cannot get access to `private` or `protectetd` members
+* Nested class by default is `static` nested class. We can use `inner` to make it contain a reference to outer class
+```Java
+  class Outer {
+    inner class Inner {
+      fun getOuterReference(): Outer = this@Outer
+    }
+  }
+```
+* `Sealed` class cannot have inheritors outside of the class
 
 
 

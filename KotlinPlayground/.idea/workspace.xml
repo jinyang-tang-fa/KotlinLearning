@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810e02e1-f013-47fe-9b8b-88f423971a90" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ChapterFour.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KotlinInActionNotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinInActionNotes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterThreeKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterThreeKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChapterThree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChapterThree.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +47,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.ChapterThreeKt">
+  <component name="RunManager" selected="Kotlin.ChapterFourKt">
+    <configuration name="ChapterFourKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="KotlinPlayground" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ChapterFourKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChapterThreeKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="KotlinPlayground" />
       <option name="VM_PARAMETERS" />
@@ -76,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.ChapterFourKt" />
         <item itemvalue="Kotlin.ChapterThreeKt" />
         <item itemvalue="Kotlin.ChapterTwoKt" />
       </list>
@@ -94,7 +108,7 @@
       <workItem from="1566927024578" duration="1779000" />
       <workItem from="1567015157910" duration="6853000" />
       <workItem from="1567027814912" duration="4847000" />
-      <workItem from="1567091478149" duration="9176000" />
+      <workItem from="1567091478149" duration="15518000" />
     </task>
     <servers />
   </component>

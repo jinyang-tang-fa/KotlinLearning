@@ -22,11 +22,11 @@
 ## 2. Kotlin Basics
 * Data classes - a concise syntax for creating **immutable** value objects
 * NullPointerException
-```Java
+```Kotlin
    val s: String? = null
 ```
 * ClassCastException
-```Java
+```Kotlin
 	If (value is String)
 	 	println(value.toUpperCase())
 ```

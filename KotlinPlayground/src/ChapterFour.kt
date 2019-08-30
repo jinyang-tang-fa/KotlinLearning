@@ -5,6 +5,9 @@ fun main(args: Array<String>) {
     button.click()
     button.setFocus(false)
     button.showOff()
+
+    // sealed classes
+    println(evalInChap4(ExprInChap4.Sum(ExprInChap4.Num(1), ExprInChap4.Num(5))))
 }
 
 interface Clickable {
@@ -27,14 +30,32 @@ class ButtonInChap4: Clickable, Focusable {
 
 interface State: Serializable
 
-interface ViewInChapter4 {
+interface ViewInChap4 {
     fun getCurrentState(): State
     fun restoreState(state: State) {}
 }
 
-class ButtonInChapter4: ViewInChapter4{
+class ButtonInChap4New: ViewInChap4{
     override fun getCurrentState(): State = ButtonState()
     override fun restoreState(state: State) { }
     class ButtonState: State{  // static nested class
     }
 }
+
+// sealed class
+sealed class ExprInChap4 {
+    class Num(val value: Int): ExprInChap4()
+    class Sum(val left: ExprInChap4, val right: ExprInChap4): ExprInChap4()
+}
+
+fun evalInChap4(e: ExprInChap4): Int =
+    when (e) {
+        is ExprInChap4.Num -> e.value
+        is ExprInChap4.Sum -> evalInChap4(e.left) + evalInChap4(e.right)
+    }
+
+// implement properties declared in interfaces
+interface UserInChap4 {
+    val nickname: String
+}
+

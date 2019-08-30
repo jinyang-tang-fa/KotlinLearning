@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810e02e1-f013-47fe-9b8b-88f423971a90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ChapterFour.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinInActionNotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinInActionNotes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/META-INF/KotlinPlayground.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ButtonInChap4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ButtonInChap4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterFourKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterFourKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Clickable$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Clickable$DefaultImpls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Focusable$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Focusable$DefaultImpls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChapterFour.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChapterFour.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +110,7 @@
       <workItem from="1566927024578" duration="1779000" />
       <workItem from="1567015157910" duration="6853000" />
       <workItem from="1567027814912" duration="4847000" />
-      <workItem from="1567091478149" duration="15518000" />
+      <workItem from="1567091478149" duration="17388000" />
     </task>
     <servers />
   </component>

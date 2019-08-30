@@ -150,7 +150,7 @@ same as
   println("Kotlin".lastTwoLetters())
 ```
 If using extension function outside of its package, need to import it
-```Java
+```Kotlin
   import strings.lastChar as last. // can rename for easy use
 ```
 * The `static` nature of extensions -> 
@@ -201,7 +201,14 @@ If using extension function outside of its package, need to import it
     }
   }
 ```
-* `Sealed` class cannot have inheritors outside of the class
+* `Sealed` class cannot have inheritors outside of the class, which restrict the possibility of creating subclasses. -> if `when` expression handles all subclasses of a sealed class, we don't need `else`
+ branch any more
+ * When inheriting a class without providing any constructors, we have to explicitly invoke the constructor of the superclass, **even with no parameters**
+ ```Java
+  class RadioButton: Button()
+ ```
+* Interface has **no constructor**, so when implementing an interface, we never put parentheses after its name 
+* Multiple secondary constructors can be defined with the `constructor` keyword 
 
 
 

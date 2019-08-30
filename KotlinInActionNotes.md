@@ -188,10 +188,10 @@ If using extension function outside of its package, need to import it
 * If you override an `open` function, it is by default `open`, but can add `final` to make it not being overridden
 * **Abstract** members are always open by default, can need to be to be overridden in subclasses
 * Default visibility is `public`
-1. `public` - visible everywhere
-2. `internal` - within module
-3. `protected` - within subclasses
-4. `private` - within class
+  1. `public` - visible everywhere
+  2. `internal` - within module
+  3. `protected` - within subclasses
+  4. `private` - within class
 * Extension functions cannot get access to `private` or `protectetd` members
 * Nested class by default is `static` nested class. We can use `inner` to make it contain a reference to outer class
 ```Kotlin
@@ -209,6 +209,13 @@ If using extension function outside of its package, need to import it
  ```
 * Interface has **no constructor**, so when implementing an interface, we never put parentheses after its name 
 * Multiple secondary constructors can be defined with the `constructor` keyword 
+* An interface can contain properties with *getters* and *setters*, as long as they don't reference a backing field
+```Kotlin
+  interface User {
+    val nickname: String
+      get() = email.substringBefore('@')
+  }
+```
 
 
 

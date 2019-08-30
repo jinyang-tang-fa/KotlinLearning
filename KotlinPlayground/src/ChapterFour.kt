@@ -8,6 +8,10 @@ fun main(args: Array<String>) {
 
     // sealed classes
     println(evalInChap4(ExprInChap4.Sum(ExprInChap4.Num(1), ExprInChap4.Num(5))))
+
+    // implement properties
+    println(PrivateUserInChap4("abc", "abc@blackrock.com").nickname)
+    println("Subscribing User is: ${SubscribingUser("abc@blackrock.com").nickname}")
 }
 
 interface Clickable {
@@ -56,6 +60,16 @@ fun evalInChap4(e: ExprInChap4): Int =
 
 // implement properties declared in interfaces
 interface UserInChap4 {
+    val email: String
     val nickname: String
+        get() = email.substringBefore('@')
+}
+
+class PrivateUserInChap4(override val nickname: String, override val email: String): UserInChap4
+
+class SubscribingUser(val inputEmail: String): UserInChap4 {
+    override val nickname: String
+       get() = email.substringBefore('@')
+    override val email: String = inputEmail
 }
 

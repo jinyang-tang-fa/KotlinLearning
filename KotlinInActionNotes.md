@@ -27,16 +27,16 @@
 ```
 * ClassCastException
 ```Kotlin
-	If (value is String)
-	 	println(value.toUpperCase())
+  If (value is String)
+    println(value.toUpperCase())
 ```
 
 * `If` is expression with value instead of statement
-```Java
+```Kotlin
   if (a > b) a else b
 ```
 * Type inference
-```Java
+```Kotlin
    fun max(a: Int?, b: Int?): Int? = if(a != null && b != null && a > b) a else b
 ```
 
@@ -51,7 +51,7 @@
    Define any methods in the enum class, the semicolon separates the enum constant list from the method definitions
 
 * `when` expression - like `switch` in Java, but with no argument (must have `else` defined within `when` block)
-```Java
+```Kotlin
   fun whenFunction(c1: Color, c2: Color) =
     when {
       (c1 == Color.RED && c2 == Color.YELLOW) -> Color.ORANGE
@@ -62,14 +62,14 @@
     - If a block is used in `when` condition check, **the last expression is the result**
 
 * Use `:` to mark class *implements* an interface
-```Java
+```Kotlin
   interface Expr
   class Num(val value: Int): Expr
   class Sum(val left: Expr, val right: Expr): Expr
 ```
 
 * Smart cast: check whether a variable is certain type using `is`, and can directly use this variable without additional casting
-```Java
+```Kotlin
   fun eval(e: Expr): Int {
     if (e is Num) {
       resturn e.value
@@ -83,7 +83,7 @@
 ```
 
 * `while` and `do-while` is the same as Java
-```Java
+```Kotlin
   while(condition) {
     ...
   }
@@ -93,10 +93,10 @@
 ```
 
 * `ranges` concept is used to do iteration - `..` is used and is *inclusive* which include second value
-```Java
+```Kotlin
   val oneToTen = 1..10
 ```
-```Java
+```Kotlin
   for (i in 1..1000) {
     ...
   }
@@ -112,7 +112,7 @@
 * `map[key]` and `map[key] = value` can be used to read and update the map
 * Use `in` to check whether a value is in a range, `!in` to check the opposite, both also works in `when` expression
 * `throw` is also expression
-```Java
+```Kotlin
   val percentage = 
      if (number in 0..100)
          number
@@ -126,21 +126,21 @@
 * Create new set: `setOf()` (`hashSetOf()` -> default mutable set), same for `arrayListOf()` and `hashMapOf()`
 * More methods than that in Java: `last()`, `max()`...
 * Specify names of some arguments to **increase readability**, and you can omit some middle arguments (with default value set)
-```Java
+```Kotlin
   jointToString(collection, separator=" ", prefix="(", postfix=")")
 ```
 * Specify default values for parameters in a function declaration to **avoid creating overloads**
 * Functions can be declared outside of class -> at the top level of a source file (compiled to `static method`)
 * Properties can be placed at the top level of a file as well, will be stored in a `static field` -> can be used to defined constants
-```Java
+```Kotin
   const val UNIX_LINE_SEPARATOR = "\n"
 ```
 same as 
-```Java
+```Kotlin
   public static final String UNIX_LINE_SEPARATOR = "\n";
 ```
 * Extension functions - allow us to add our own method to the existing class, without the need to rewrite the existing code
-```Java
+```Kotlin
   package strings
 
   fun String.lastChar(): Char = this[this.length - 1]
@@ -156,7 +156,7 @@ If using extension function outside of its package, need to import it
 * The `static` nature of extensions -> 
 1. can extend from a more specific type
 2. cannot be overridden in subclasses
-```Java
+```Kotlin
   open class View {
     open fun click() = println("View click")
   }
@@ -178,7 +178,7 @@ If using extension function outside of its package, need to import it
 ## 4. Classes, objects and interfaces
 * Interfaces can contain definitions of **abstract** methods and implementations of **non-abstract** methods, but cannot contain any `state`
 * Interface method can have default implementation, it can be overridden, but also can be omitted in implementation
-```Java
+```Kotlin
   interface Clickable {
     fun showOff() = println("I'm clickable")
   }
@@ -194,7 +194,7 @@ If using extension function outside of its package, need to import it
 4. `private` - within class
 * Extension functions cannot get access to `private` or `protectetd` members
 * Nested class by default is `static` nested class. We can use `inner` to make it contain a reference to outer class
-```Java
+```Kotlin
   class Outer {
     inner class Inner {
       fun getOuterReference(): Outer = this@Outer
@@ -204,7 +204,7 @@ If using extension function outside of its package, need to import it
 * `Sealed` class cannot have inheritors outside of the class, which restrict the possibility of creating subclasses. -> if `when` expression handles all subclasses of a sealed class, we don't need `else`
  branch any more
  * When inheriting a class without providing any constructors, we have to explicitly invoke the constructor of the superclass, **even with no parameters**
- ```Java
+ ```Kotlin
   class RadioButton: Button()
  ```
 * Interface has **no constructor**, so when implementing an interface, we never put parentheses after its name 

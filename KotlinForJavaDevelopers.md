@@ -26,3 +26,4 @@
 	}
 ```
 * Some Kotlin handy extension functions: `String.jointToString()`, `Array<String>.getOrNull()`, `List.withIndex()`, `Int.until()`, `A.to()`(can be used to create Pair(A,B))， `Char.isLetter()`, `Char.isLetterOrDigit()`, `String.trimMargin()`, `String.trimIndent()`, `String.toRegex()`, `String.toIntOrNull()`, `T.eq()`
+* `Nullable types` does not equal to `Optional` -> `Optional` is a wrapper, an extra object is created; while `nullable types` don't create any wrappers 

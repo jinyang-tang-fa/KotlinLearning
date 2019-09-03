@@ -216,6 +216,10 @@ If using extension function outside of its package, need to import it
       get() = email.substringBefore('@')
   }
 ```
+* Kotlin `setter` has a special identifier `field` where we can get access to the stored data, and only one of the accessors (`getter` or `setter`) can be redefined for a mutable property.
+* `==` operator in Kotlin by default compare two objects: it compares their values by calling `equals` method under the hood
+* `===` can be used if we want to compare the object references
+* `hashCode` method should always be overridden together with `equals`!
 
 
 

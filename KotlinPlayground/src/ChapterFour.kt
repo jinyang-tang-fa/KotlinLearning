@@ -12,6 +12,22 @@ fun main(args: Array<String>) {
     // implement properties
     println(PrivateUserInChap4("abc", "abc@blackrock.com").nickname)
     println("Subscribing User is: ${SubscribingUser("abc@blackrock.com").nickname}")
+
+    // accessing backing field
+    val user = UserAccessBackingField("Alice")
+    user.address = "ABC DEF"
+
+    // private setter
+    val lengthCounter: LengthCounter? = null
+    lengthCounter?.addWord("abcdef")
+    // lengthCounter.counter = 5 has compiling error
+    println("Word length is: ${lengthCounter?.counter}")
+
+    // universal object methods
+    val client1 = Client("Alice", 123456)
+    println(client1)
+    val client2 = Client("Alice", 123456)
+    println("client1 and client2 are equal: ${client1==client2}")
 }
 
 interface Clickable {
@@ -67,9 +83,43 @@ interface UserInChap4 {
 
 class PrivateUserInChap4(override val nickname: String, override val email: String): UserInChap4
 
-class SubscribingUser(val inputEmail: String): UserInChap4 {
+class SubscribingUser(inputEmail: String): UserInChap4 {
     override val nickname: String
        get() = email.substringBefore('@')
     override val email: String = inputEmail
 }
+
+// Accessing a backing field from getter and setter
+class UserAccessBackingField(val name: String) {
+    var address: String = "unspecified"
+        set(value: String) {
+            println("""
+                Address was changed for $name:
+                "$field" -> "$value".
+            """.trimIndent())
+            field = value
+        }
+}
+
+class LengthCounter {
+    var counter: Int = 0
+        private set // this property cannot be changed outside of the class
+    fun addWord(word: String) {
+        counter += word.length
+    }
+}
+
+class Client(val name: String, val postalCode: Int) {
+    override fun toString(): String = "Client(name = $name, postalCode = $postalCode)"
+    override fun equals(other: Any?): Boolean {
+        if (other == null || other !is Client) {
+            return false
+        }
+        return name == other.name && postalCode == other.postalCode
+    }
+}
+
+
+
+
 

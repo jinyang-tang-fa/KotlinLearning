@@ -2,27 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="810e02e1-f013-47fe-9b8b-88f423971a90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Client.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/LengthCounter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/UserAccessBackingField.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_50.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_50.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_3_50.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_3_50.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/modules/Mastermind/Task/Kotlin_for_Java_Developers._Week_2.Mastermind-Task.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/modules/Mastermind/Task/Kotlin_for_Java_Developers._Week_2.Mastermind-Task.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/modules/Mastermind/Task/Kotlin_for_Java_Developers._Week_2.Mastermind-Task.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/modules/util/Kotlin_for_Java_Developers._Week_2.util.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/modules/util/Kotlin_for_Java_Developers._Week_2.util.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/modules/util/Kotlin_for_Java_Developers._Week_2.util.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/Kotlin_for_Java_Developers._Week_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/Kotlin_for_Java_Developers._Week_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/study_project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/.idea/study_project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/Mastermind/Task/src/mastermind/evaluateGuess.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin for Java Developers. Week 2/Mastermind/Task/src/mastermind/evaluateGuess.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../KotlinForJavaDevelopers.md" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinForJavaDevelopers.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../KotlinInActionNotes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../KotlinInActionNotes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ButtonInChap4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ButtonInChap4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ButtonInChap4New$ButtonState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ButtonInChap4New$ButtonState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ButtonInChap4New.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ButtonInChap4New.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterFourKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ChapterFourKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Clickable$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Clickable$DefaultImpls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ExprInChap4$Num.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ExprInChap4$Num.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ExprInChap4$Sum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ExprInChap4$Sum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ExprInChap4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ExprInChap4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/Focusable$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/Focusable$DefaultImpls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/PrivateUserInChap4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/PrivateUserInChap4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/SubscribingUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/SubscribingUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/UserInChap4$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/UserInChap4$DefaultImpls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KotlinPlayground/ViewInChap4$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KotlinPlayground/ViewInChap4$DefaultImpls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChapterFour.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChapterFour.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +127,7 @@
       <workItem from="1567015157910" duration="6853000" />
       <workItem from="1567027814912" duration="4847000" />
       <workItem from="1567091478149" duration="28488000" />
-      <workItem from="1567524080452" duration="362000" />
+      <workItem from="1567524080452" duration="855000" />
     </task>
     <servers />
   </component>

@@ -95,3 +95,87 @@
 	}
 ```
 * `lateinit` variable cannot be `val`, cannot be `nullable`, cannot be `primitive` type (because only `reference` types might be initilized with `null`)
+* `public` and `final` are used by default in Kotlin OOP
+* In the constructor, with `var/val` it will become property automatically, else it will just be constructor parameters
+* Changing the visibility of constructor or difining a second constructor both require `constructor` keyword
+* When overriding a property, it's actually overriding the `getter` instead of `field`
+```Kotlin
+	open class Parent {
+		open val foo = 1
+		init {
+			println(foo)
+		}
+	}
+
+	class Child: Parent() {
+		override val foo = 2
+	}
+
+	fun main() {
+		Child()
+	}
+```
+	The output is `0`, because `println()` is called inside `Parent` constructor, but `getFoo` is overriden in `Child` class where the field `foo` hasn't been initialized
+* `data class` automatically generates `equals`, `hashCode`, `copy`, `toString`....
+* In `data class`, if we want to exclude the property in the automatically generated functions, we can define it in the class body
+```Kotlin
+	data class User(val email: String) {
+		var nickname: String? = null
+	}
+
+	val user1 = User("abc@gmail.com")
+	user1.nickname = "abc"
+	println(user1)  // User(email=abc@gmail.com)
+
+	val user2 = User("abc@gmail.com")
+	user2.nickname = "def"
+	println(user2 == user1) // true
+```
+* `sealed` modifier restricts class hierarchy -> all subclasses must be located in the same file (in the `when`, if all subclasses have been covered, no need of `else`)
+* `object` expression is used to replace Java's `anonymous classes`
+```Kotlin
+	window.addMouseListner(
+		object: MouseAdapter() {
+			override fun mouseClicked(e: MouseEvent) {
+				...
+			}
+			override fun mouseEntered(e: MouseEvent) {
+				...
+			}
+		}
+	)
+```
+	`object expression` is not `singleton`, because a new instance is created for each call
+* `inner` modifier cannot be used to `object`, because `object` is a singleton, so only one instance exists, but there might be potentially many instances of the outer class, isn't clear which exact reference should be stored then
+* Generic functions:
+```Kotlin
+	fun <T> List<T>.filter(predicate: (T) -> Boolean): List<T>
+
+	fun use1(ints: List<Int>) {
+		ints.filter{it > 0}
+	}
+
+	fun use2(strings: List<String>) {
+		strings.filter{ it.isNotEmpty()}
+	}
+```
+* Defining upper bound for generic functions:
+```Kotlin
+	fun <T: Any> List<T>.filter...  // T is non-nullable
+```
+```Kotlin
+	fun <T: Comparable<T>> max(first: T, second: T): T {
+		return if (first > second) first else second
+	}
+```
+```Kotlin
+	// multiple constraints
+	fun <T> ensureTrailingPeriod(seq: T) where T: CharSequence, T: Appendable {
+		if (!se.endsWith('.')) {
+			seq.append('.')
+		}
+	}
+```
+* Why `public` and `final` are by default?
+	=> Because we want to make application developer as convenient as possible, but at the same time not hurting library developer as much as possible
+* `operator` syntax works only when the private operator is visible

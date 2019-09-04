@@ -53,3 +53,45 @@
 	// option 2
 	f?.invoke()
 ```
+* The value is stored:
+```Kotlin
+	val foo1 = run {
+		println("Calculating the answer...")
+		42
+	}
+
+	fun main(args: Array<String>) {
+		println("$foo1 $foo1")
+	}
+```
+`Calculating the answer` will be only printed out once, because it is being printed when we assign the value to `foo1`, then it's merely getting this property
+* `getter` is calculating the value on the run everytime, without `get()` we store the value in the field
+* Mutable extension properties:
+```Kotlin
+	var StringBuilder.lastChar: Char
+		get() = get(length - 1)
+		set(value: Char) {
+			this.setCharAt(length - 1, value)
+		}
+```
+* `Lazy` property Vs. `lateinit`
+```Kotlin
+	// Lazy property
+	val lazyValue: String by lazy {
+		println("computed!")
+		"Hello"
+	}
+```
+```Kotlin
+	// lateinit
+	class KotlinActivity: Activity() {
+		lateinit var myData: MyData
+
+		override fun onCreate(savedInstanceState: Bundle?) {
+			super.onCreate(savedInstanceState)
+			myData = intent.getParcelableExtra("MY_DATA")
+		}
+		...myData.foo // no need to define myData as non-nullable property
+	}
+```
+* `lateinit` variable cannot be `val`, cannot be `nullable`, cannot be `primitive` type (because only `reference` types might be initilized with `null`)

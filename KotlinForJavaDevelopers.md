@@ -179,3 +179,98 @@
 * Why `public` and `final` are by default?
 	=> Because we want to make application developer as convenient as possible, but at the same time not hurting library developer as much as possible
 * `operator` syntax works only when the private operator is visible
+* `run` function -> Runs the block of code(`lambda`) and returns the last expression as the result
+```Kotlin
+	val foo = run {
+		println("Calculating foo ...")
+		"foo"
+	}
+```
+* `let` function -> Allows to check the argument for being non-null, not only the receiver
+```Kotlin
+	// if (email != null) sendEmailTo(email)
+	email?.let { e -> sendEmailTo(e) }
+	getEmail()?.let { sendEmailTo(it) }
+```
+```Kotlin
+	interface Session {
+		val user: User
+	}
+
+	fun analyzeUserSession(session: Session) {
+		(session.user as? FacebookUser)?.let{
+			println(it.accountId)
+		}
+	}
+```
+* `takeIf` function -> Returns the receiver object if it satisfies the given predicate, otherwise returns null
+```Kotlin
+	issue.takeIf {it.status == FIXED}
+```
+```Kotlin
+	person.patronymicName.takeIf(String::isNotEmpty)
+```
+```Kotlin
+	issues.filter { it.status == OPEN }
+		  .takeIf(List<Issue>::isNotEmpty)
+		  ?.let { println("There're some open issues") }
+```
+* `repeat` function -> Repeats an action for a given number of times
+```Kotlin
+	repeat(10) {
+		println("Welcome!")
+	}
+```
+* All the four above functions are declared as `inline` functions, so that compiler substitues a body of the function instead of calling it, which can avoid performance overhead. Therefore, it's better only making small functions to be `inline`
+* `withLock` function
+```Kotlin
+	val l: Lock = ...
+	l.withLock {
+		// access the resouce protected by this lock
+	}
+```
+	How `inline` function `withLock` is defined:	
+```Kotlin
+	inline fun <T> Lock.withLock(action: () -> T): T {
+		lock()
+		try {
+			return action()
+		}finally {
+			unlock()
+		}
+	}
+```
+* `Collections` eagerlly return the result, while `Sequences` postpone the actual computation (lazy evaluation)
+```Kotlin
+	val list = listOf(1, 2, -3)
+	val maxOddSquare = list
+						.asSequence()
+						.map {it * it}
+						.filter { it % 2 == 1 }
+						.max()
+```
+* `yield` function
+```Kotlin
+	val numbers = sequence {
+		var x = 0
+		while (true) {
+			yield(x++)
+		}
+	}
+	numbers.take(5).toList() // [0,1,2,3,4]
+```
+* Some library functions
+```Kotlin
+	people.count {it.age < 21}
+```
+```Kotlin
+	people.sortedByDescending {it.age}
+```
+```Kotlin
+	people.mapNotNull {
+		person -> person.takeIf{ it.isPublicProfile }?.name
+	}
+```
+```Kotlin
+	val group = map.getOrPut(person.age) { mutableListOf() }
+```

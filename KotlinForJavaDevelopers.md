@@ -274,3 +274,79 @@
 ```Kotlin
 	val group = map.getOrPut(person.age) { mutableListOf() }
 ```
+* `with` function -> don't need to repeat the receiver several times
+```Kotlin
+	val sb = StringBuilder()
+	with(sb) {
+		appendln("Alphabet: ")
+		for (c in 'a'..'z') {
+			append(c)
+		}
+		toString()
+	}
+```
+* Difference between some library functions
+| 			              |  { .. this ..} |   { .. it ..} |
+| :---:                   |     :---:      |         :---: |
+| return result of lambda | with / run     |     let       |
+| return receiver         | apply          |     also      |
+```Kotlin
+	inline fun <T, R> T.run(block: T.() -> R): R
+	{return this.blcok()}
+
+	inline fun <T, R> T.let(block: (T) -> R): R
+	{return block(this)}
+
+	inline fun <T> T.apply(block: T.() -> Unit): T
+	{this.block(); return this}
+
+	inline fun <T> T.also(block: (T) -> Unit): T
+	{block(this); return this}
+```
+	Example:
+```Kotlin
+	interface X {
+		var first: Int
+		var second: Int
+	}
+
+	interface Y {
+		fun start()
+		fun finish()
+	}
+
+	interface Z {
+		fun init()
+	}
+
+	fun foo(x: X, y: Y?, z: Z) {
+		with(x) {
+			first = 1
+			second = 2
+		}
+		y?.run {
+			start()
+			finish()
+		}
+		val result = z.apply {
+			init()
+		}
+
+	}
+```
+* Primitive & wrapper types: (`Double`, `Float` and `Boolean` are same as `Int`)
+|   Kotlin |       Java        |
+|   Int    |       int         |
+|   Int?   | java.lang.Integer |
+|Array<Int>|      Integer[]    |
+| IntArray |       int[]       |
+|   Any    | java.lang.Object  |
+* `kotlin.String` - hides some confusing 
+* `Any` is the super type of both primitive and reference type, and `Nothing` is the subtype of all the types
+* In Kotlin, prefer `List` to `Array`, the `MutableList` is under the hood `ArrayList`
+* Use `Unit` instead of `void` -> no meaningful value is returned, while `Nothing` means *this function never returns* (throwing exception, like this function never compoletes)
+* All the followings are considered as `Nothing` type:
+   1. throw IllegalStateException()
+   2. return
+   3. TODO("Needs to be done")
+* The `read-only` interface just lacks mutating methods, the actual list can be changed by another reference
